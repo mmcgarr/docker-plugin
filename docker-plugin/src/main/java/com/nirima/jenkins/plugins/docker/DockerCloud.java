@@ -82,6 +82,7 @@ public class DockerCloud extends Cloud {
 
     public final List<DockerTemplate> templates;
     public final String serverUrl;
+    public final String sshHost;
     public final int containerCap;
 
     public final int connectTimeout;
@@ -100,6 +101,7 @@ public class DockerCloud extends Cloud {
     public DockerCloud(String name,
                        List<? extends DockerTemplate> templates,
                        String serverUrl,
+                       String sshHost,
                        String containerCapStr,
                        int connectTimeout,
                        int readTimeout,
@@ -111,6 +113,7 @@ public class DockerCloud extends Cloud {
         this.version = version;
         this.credentialsId = credentialsId;
         this.serverUrl = serverUrl;
+        this.sshHost = "".equals(sshHost) ? serverUrl : sshHost;
         this.connectTimeout = connectTimeout;
         this.readTimeout = readTimeout;
         if (templates != null)

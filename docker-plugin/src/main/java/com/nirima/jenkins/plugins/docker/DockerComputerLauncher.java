@@ -56,7 +56,7 @@ public class DockerComputerLauncher extends DelegatingComputerLauncher {
             }
 
             if (host == null || host.equals("0.0.0.0")) {
-                URL hostUrl = new URL(template.getParent().serverUrl);
+                URL hostUrl = new URL(template.getParent().sshHost);
                 host = hostUrl.getHost();
             }
 

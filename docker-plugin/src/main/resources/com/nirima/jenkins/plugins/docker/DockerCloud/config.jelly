@@ -9,6 +9,10 @@
       <f:textbox />
     </f:entry>
 
+   <f:entry title="${%Docker SSH host}" field="sshHost">
+      <f:textbox />
+    </f:entry>
+
     <f:entry title="${%Docker Version}" field="version">
         <f:textbox />
     </f:entry>
